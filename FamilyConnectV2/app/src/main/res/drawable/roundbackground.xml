@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="20dp" /> <!-- Radijus zaobljavanja ivica, postavite na pola visine/širine da biste dobili krug -->
+
+    <!-- Gradijentna pozadina -->
+    <gradient
+        android:startColor="#3F51B5"
+    android:endColor="#2196F3"
+    android:type="linear"
+    android:angle="45" />
+
+    <!-- Crna ivica -->
+    <stroke
+        android:width="1dp"
+    android:color="#000000" />
+</shape>

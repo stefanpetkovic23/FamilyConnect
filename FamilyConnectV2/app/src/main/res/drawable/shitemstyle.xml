@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pozadina -->
+    <item android:drawable="@drawable/shitemback" />
+
+    <!-- Okvir sa zaobljenim ivicama -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Transparentna unutrašnjost -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/white" /> <!-- Debljina i boja okvira -->
+            <corners android:radius="16dp" /> <!-- Radijus zaobljenja ivica -->
+        </shape>
+    </item>
+
+</layer-list>

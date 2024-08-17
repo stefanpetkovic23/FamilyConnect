@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.familyconnectv2.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_toDoFragment"
+            app:destination="@id/toDoFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.familyconnectv2.ui.groups.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_createGroupDialog"
+            app:destination="@id/createGroupDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.familyconnectv2.ui.budget.BudgetFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_recipesDetailsFragment"
+            app:destination="@id/recipesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.familyconnectv2.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.familyconnectv2.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@+id/nav_home"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_loginFragment_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.familyconnectv2.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.familyconnectv2.ui.calendar.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_monthCalendarFragment"
+            app:destination="@id/monthCalendarFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_weekCalendarFragment"
+            app:destination="@id/weekCalendarFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.familyconnectv2.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_chatMessagesFragment"
+            app:destination="@id/chatMessagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.familyconnectv2.ui.shopping.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" />
+    <fragment
+        android:id="@+id/toDoFragment"
+        android:name="com.example.familyconnectv2.ui.todo.ToDoFragment"
+        android:label="fragment_to_do"
+        tools:layout="@layout/fragment_to_do" >
+        <action
+            android:id="@+id/action_toDoFragment_to_privateToDoFragment"
+            app:destination="@id/privateToDoFragment" />
+        <action
+            android:id="@+id/action_toDoFragment_to_groupToDoFragment"
+            app:destination="@id/groupToDoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.familyconnectv2.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_splashFragment"
+            app:destination="@id/splashFragment"
+            app:popUpTo="@+id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/privateToDoFragment"
+        android:name="com.example.familyconnectv2.ui.privateToDo.PrivateToDoFragment"
+        android:label="fragment_private_to_do"
+        tools:layout="@layout/fragment_private_to_do" />
+    <fragment
+        android:id="@+id/createGroupDialog"
+        android:name="com.example.familyconnectv2.ui.groups.CreateGroupDialog"
+        android:label="CreateGroupDialog" />
+    <fragment
+        android:id="@+id/groupToDoFragment"
+        android:name="com.example.familyconnectv2.ui.GroupToDoFragment"
+        android:label="GroupToDoFragment" >
+        <action
+            android:id="@+id/action_groupToDoFragment_to_addToDoToGroupFragment"
+            app:destination="@id/addToDoToGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDoToGroupFragment"
+        android:name="com.example.familyconnectv2.ui.todo.AddToDoToGroupFragment"
+        android:label="fragment_add_to_do_to_group"
+        tools:layout="@layout/fragment_add_to_do_to_group" />
+    <fragment
+        android:id="@+id/agendaFragment"
+        android:name="com.example.familyconnectv2.ui.agenda.AgendaFragment"
+        android:label="fragment_agenda"
+        tools:layout="@layout/fragment_agenda" >
+        <action
+            android:id="@+id/action_agendaFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthCalendarFragment"
+        android:name="com.example.familyconnectv2.ui.monthcalendar.MonthCalendarFragment"
+        android:label="fragment_month_calendar"
+        tools:layout="@layout/fragment_month_calendar" >
+        <action
+            android:id="@+id/action_monthCalendarFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekCalendarFragment"
+        android:name="com.example.familyconnectv2.ui.weekcalendar.WeekCalendarFragment"
+        android:label="fragment_week_calendar"
+        tools:layout="@layout/fragment_week_calendar" >
+        <action
+            android:id="@+id/action_weekCalendarFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="com.example.familyconnectv2.ui.addactivity.AddActivityFragment"
+        android:label="fragment_add_activity"
+        tools:layout="@layout/fragment_add_activity" />
+    <fragment
+        android:id="@+id/chatMessagesFragment"
+        android:name="com.example.familyconnectv2.ui.chatmassages.ChatMessagesFragment"
+        android:label="fragment_chat_messages"
+        tools:layout="@layout/fragment_chat_messages" />
+    <fragment
+        android:id="@+id/recipesDetailsFragment"
+        android:name="com.example.familyconnectv2.ui.budget.RecipesDetailsFragment"
+        android:label="fragment_recipes_details"
+        tools:layout="@layout/fragment_recipes_details" />
+</navigation>
